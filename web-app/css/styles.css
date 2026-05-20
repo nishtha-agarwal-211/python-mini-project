@@ -232,14 +232,14 @@ body {
 /* ═══════════════════════════════════════
    HERO SECTION
 ═══════════════════════════════════════ */
-/* .hero-section {
+.hero-section {
     position: relative;
-    padding: 9rem 0;
+    padding: 7.5rem 0 3.5rem;
     min-height: 520px;
     text-align: center;
     overflow: hidden;
     background: var(--hero-green-nav-bg);
-} */
+}
 
 
 /* Canvas fills the full hero */
@@ -285,7 +285,7 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     font-size: clamp(0.72rem, 1.2vw, 0.92rem);
     letter-spacing: 0.02em;
-    opacity: 0.5;
+    opacity: 0.18;
     text-shadow: 0 0 18px rgba(34, 197, 94, 0.18);
     white-space: nowrap;
     transform-origin: center;
@@ -300,14 +300,14 @@ body {
 .snippet-two {
     top: 25%;
     right: 10%;
-    opacity: 0.5;
+    opacity: 0.18;
     animation: codeFloatTwo 22s ease-in-out infinite;
 }
 
 .snippet-three {
     top: 50%;
     left: 12%;
-    opacity: 0.5;
+    opacity: 0.22;
     animation: codeFloatThree 20s ease-in-out infinite;
 }
 
@@ -326,20 +326,20 @@ body {
 .snippet-six {
     top: 20%;
     right: 25%;
-    opacity: 0.42;
+    opacity: 0.15;
     animation: codeFloatThree 26s ease-in-out infinite;
 }
 
 .snippet-seven {
     top: 80%;
     right: 18%;
-    opacity: 0.42;
+    opacity: 0.15;
     animation: codeFloatTwo 28s ease-in-out infinite;
 }
 
 [data-theme="light"] .code-snippet {
     color: color-mix(in srgb, var(--text-secondary) 70%, var(--accent-color));
-    opacity: 0.5;
+    opacity: 0.15;
     text-shadow: none;
 }
 
