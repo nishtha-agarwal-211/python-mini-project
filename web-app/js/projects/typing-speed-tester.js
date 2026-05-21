@@ -257,7 +257,7 @@ function getTypingSpeedTesterHTML() {
         inputElement.value = "";
         inputElement.disabled = false;
         inputElement.removeAttribute("aria-disabled");
-        inputElement.focus();
+        inputElement.focus({ preventScroll: true });
 
         result.innerHTML = "";
         startTime = Date.now();
@@ -733,7 +733,7 @@ resultDetails.innerHTML = `
         requestAnimationFrame(() => sentenceElement.classList.remove('sentence-loading'));
         inputElement.value = '';
         inputElement.disabled = false;
-        inputElement.focus();
+        inputElement.focus({ preventScroll: true });
         if (startSession && !sessionStarted) {
             sessionStarted = true;
             startTime = Date.now();
