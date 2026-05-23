@@ -4354,3 +4354,9 @@ html[data-theme="dark"] body {
     }
 }
 }
+
+/* Responsive safety constraints for game columns */
+.project-content, .game-container, .calculator, .dots-game-container, .game2048-container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
