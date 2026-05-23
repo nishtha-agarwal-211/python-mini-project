@@ -3148,6 +3148,7 @@ body {
     .modal-content {
         padding: 1.5rem;
         border-radius: 16px;
+        position: relative;
     }
 }
 
@@ -4067,7 +4068,7 @@ body {
     color: var(--footer-card-color);
     box-shadow: inset 0 1px 0 rgba(252, 176, 91, 0.08);
     border-color: rgba(252, 176, 91, 0.1);
-}
+
 }
 
 .project-card h3 {
