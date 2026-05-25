@@ -291,6 +291,7 @@ function init2048Game() {
         for (let i = 0; i < 3; i++) {
             if (row[i] && row[i] === row[i + 1]) {
                 row[i] *= 2;
+                if (window.AudioManager) AudioManager.play("score_point");
                 score += row[i];
                 row[i + 1] = 0;
             }
@@ -380,6 +381,7 @@ function init2048Game() {
 
             if (checkGameOver()) {
                 gameMessage.textContent = "GAME OVER!";
+                if (window.AudioManager) AudioManager.play("game_over");
             }
 
             drawBoard();
@@ -388,6 +390,7 @@ function init2048Game() {
 
             if (checkGameOver()) {
                 gameMessage.textContent = "GAME OVER!";
+                if (window.AudioManager) AudioManager.play("game_over");
             } else {
                 gameMessage.textContent =
                     "No move possible in this direction!";
