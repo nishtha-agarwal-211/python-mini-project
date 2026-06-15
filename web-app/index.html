@@ -34,11 +34,14 @@
     />
   </head>
   <body class="sidebar-active">
+    <button aria-label="Switch theme" class="theme-toggle fixed-theme-toggle" type="button">
+      <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
     <!-- Scroll Progress Bar -->
     <div id="scrollProgressContainer" aria-label="Page scroll progress">
       <div id="scrollProgressBar"></div>
     </div>
-
+    
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Cursor Glow -->
@@ -1340,10 +1343,10 @@
             const icon = toggle.querySelector("i");
             if (icon) {
               if (theme === "dark") {
-                icon.className = "fas fa-sun";
+                icon.className = "fas fa-moon";
                 toggle.setAttribute("aria-label", "Switch to light mode");
               } else {
-                icon.className = "fas fa-moon";
+                icon.className = "fas fa-sun";
                 toggle.setAttribute("aria-label", "Switch to dark mode");
               }
             }
@@ -1377,11 +1380,7 @@
 
         // Add click listeners to all theme toggles
         themeToggles.forEach((toggle) => {
-          // Remove any existing listeners
-          const newToggle = toggle.cloneNode(true);
-          toggle.parentNode.replaceChild(newToggle, toggle);
-
-          newToggle.addEventListener("click", function (e) {
+          toggle.addEventListener("click", function (e) {
             e.preventDefault();
             const current = html.getAttribute("data-theme");
             const next = current === "light" ? "dark" : "light";
