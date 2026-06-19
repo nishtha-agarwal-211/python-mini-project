@@ -537,6 +537,23 @@ def generate_banner(name, category, filename):
         for i, h in enumerate(bar_heights):
             x = 230 + i * 50
             v_draw.rectangle([x, 320 - h, x + 30, 320], fill=color_accent)
+    elif "pathfinding" in n_lower or "visualizer" in n_lower:
+        # A grid with a path being found
+        cx, cy = 400, 225
+        # draw grid base
+        for r in range(5):
+            for c in range(8):
+                x = cx - 160 + c * 40
+                y = cy - 100 + r * 40
+                v_draw.rectangle([x, y, x + 35, y + 35], fill=(255,255,255,10), outline=color_accent_dim, width=1)
+        # draw start and end
+        v_draw.ellipse([cx - 150, cy - 90, cx - 135, cy - 75], fill=(16, 185, 129)) # Start
+        v_draw.ellipse([cx + 130, cy + 70, cx + 145, cy + 85], fill=(239, 68, 68)) # End
+        # draw a path
+        pts = [(cx - 142, cy - 82), (cx - 102, cy - 82), (cx - 102, cy - 42), (cx - 62, cy - 42), (cx - 62, cy - 2), (cx + 18, cy - 2), (cx + 18, cy + 38), (cx + 58, cy + 38), (cx + 58, cy + 78), (cx + 138, cy + 78)]
+        v_draw.line(pts, fill=color_accent, width=4, joint="round")
+        # draw a wall
+        v_draw.rectangle([cx - 20, cy - 100, cx + 15, cy + 15], fill=color_accent)
     else:
         # Default nice abstract waves
         points = []
@@ -633,6 +650,7 @@ projects = [
     ("Caesar Cipher", "utilities", "caesar-cipher.webp"),
     ("Unit Converter", "utilities", "unit-converter.webp"),
     ("Budget Tracker", "utilities", "budget-tracker.webp"),
+    ("Pathfinding Visualizer", "utilities", "pathfinding-visualizer.webp"),
 ]
 
 # Run generation

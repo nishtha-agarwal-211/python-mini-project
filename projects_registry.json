@@ -618,5 +618,22 @@
       "harmonics"
     ],
     "path": "math/Fourier-Series-Visualizer/Fourier-Series-Visualizer.py"
+  },
+  {
+    "name": "Pathfinding Visualizer",
+    "emoji": "🗺️",
+    "category": "utilities",
+    "difficulty": "advanced",
+    "description": "Visualize Dijkstra's and A* Search algorithms on an interactive grid.",
+    "keywords": [
+      "pathfinding",
+      "visualizer",
+      "algorithm",
+      "dijkstra",
+      "astar",
+      "grid",
+      "search"
+    ],
+    "path": "utilities/Pathfinding-Visualizer/Pathfinding-Visualizer.py"
   }
 ]
